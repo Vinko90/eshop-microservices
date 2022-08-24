@@ -2,7 +2,7 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <Nullable>enable</Nullable>
+        <Nullable>false</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>ProductAPI</RootNamespace>
     </PropertyGroup>
@@ -13,6 +13,10 @@
 
     <ItemGroup>
       <Folder Include="Controllers" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\eShop.Infrastructure\eShop.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

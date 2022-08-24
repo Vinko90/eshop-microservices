@@ -1,0 +1,20 @@
+version: "3.9"
+
+networks:
+  eshop-network:
+
+services:
+  #Configure MongoDB Container
+  mongodb:
+    image: mongo:5.0
+    container_name: "eshop-mongodb"
+    hostname: "eshop.mongodb"
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./docker_volumes/apps/mongo:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=test
+      - MONGO_INITDB_ROOT_PASSWORD=test
+    networks:
+      - eshop-network

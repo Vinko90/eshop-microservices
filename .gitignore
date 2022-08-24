@@ -350,5 +350,6 @@ MigrationBackup/
 .ionide/
 
 src/.idea/*
+infrastructure/docker_volumes
 
 .DS_Store
