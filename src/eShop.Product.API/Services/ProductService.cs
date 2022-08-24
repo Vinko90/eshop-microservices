@@ -1,17 +1,26 @@
 using eShop.Infrastructure.Command.Product;
 using eShop.Infrastructure.Event.Product;
+using ProductAPI.Repositories;
 
 namespace ProductAPI.Services;
 
 public class ProductService : IProductService
 {
-    public Task<ProductCreated> GetProduct(Guid productId)
+    private readonly IProductRepository _repo;
+    
+    public ProductService(IProductRepository repo)
     {
-        throw new NotImplementedException();
+        _repo = repo;
+    }
+    
+    public async Task<ProductCreated> GetProduct(Guid productId)
+    {
+        return await _repo.GetProduct(productId);
     }
 
-    public Task<ProductCreated> AddProduct(CreateProduct product)
+    public async Task<ProductCreated> AddProduct(CreateProduct product)
     {
-        throw new NotImplementedException();
+        product.ProductId = Guid.NewGuid();
+        return await _repo.AddProduct(product);
     }
 }

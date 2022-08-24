@@ -28,7 +28,8 @@ public class ProductRepository : IProductRepository
         return new ProductCreated
         {
             ProductId = product.ProductId,
-            CreatedAt = DateTime.UtcNow
+            CreatedAt = DateTime.UtcNow,
+            ProductName = product.ProductName
         };
     }
 
@@ -39,7 +40,8 @@ public class ProductRepository : IProductRepository
         return new ProductCreated
         {
             ProductId = product.ProductId,
-            CreatedAt = DateTime.UtcNow
+            CreatedAt = DateTime.UtcNow,
+            ProductName = product.ProductName
         };
     }
 }

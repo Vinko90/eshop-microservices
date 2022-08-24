@@ -2,17 +2,14 @@
 
     <PropertyGroup>
         <TargetFramework>net6.0</TargetFramework>
-        <Nullable>false</Nullable>
+        <Nullable>disable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
         <RootNamespace>ProductAPI</RootNamespace>
+        <UserSecretsId>aabe06b7-df7a-43eb-a3f2-26a813b81ada</UserSecretsId>
     </PropertyGroup>
 
     <ItemGroup>
         <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Controllers" />
     </ItemGroup>
 
     <ItemGroup>
